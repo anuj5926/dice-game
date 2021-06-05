@@ -1,0 +1,22 @@
+body{
+    margin-top: 100px;
+    background-color: grey;
+    text-align: center;
+}
+.dice{
+    display: inline-block;
+
+}
+img{
+    margin: 0px 50px 50px 50px;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+h2{
+    font-size: 40px;
+}
