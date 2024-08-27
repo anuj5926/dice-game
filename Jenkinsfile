@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Checkout') {
             steps {
-                echo 'Hello, Jenkins!'
+                echo 'Checking out code...'
+                git 'https://github.com/anuj5926/dice-game.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add build commands here
             }
         }
     }
