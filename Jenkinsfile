@@ -15,20 +15,19 @@ pipeline {
             steps {
                 script {
                     // Add your deployment steps here
-                    // For example, using SSH to copy files
-                    sh 'scp -r ./ubuntu@13.233.223.111:/home/ubuntu/dice'
-                    // Or using a deployment tool
-                    // e.g., Ansible, Terraform, Docker commands, etc.
+                    echo 'Deploying to the cloud server...'
+                    // Example deployment command
+                    sh 'scp -r ./your-files user@your-cloud-server:/path/to/deploy'
                 }
             }
         }
     }
     post {
         success {
-            echo 'Deployment succeeded!'
+            echo 'Pipeline succeeded!'
         }
         failure {
-            echo 'Deployment failed!'
+            echo 'Pipeline failed!'
         }
     }
 }
